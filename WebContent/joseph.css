@@ -1,0 +1,55 @@
+@CHARSET "UTF-8";
+h1{
+	font-weight: bold;
+	margin-left:70px;
+}
+body{
+	background-image:url('./img/timg.jpg');
+	background-repeat:no-repeat;
+	background-size:cover; 
+}
+  .text{
+     background-color:pink;
+     width:250px;
+     height:35px;
+     margin-left:10px;
+     opacity:1;
+  }
+   .text1{
+     background-color:pink;
+     width:250px;
+     height:35px;
+     margin-left:28px;
+   }
+      
+  .text2 {
+     background-color:pink;
+     width:250px;
+     height:35px;
+     margin-left:6px;
+  }
+  .button{
+    height: 40px;	
+	width: 100px;		
+	background: yellow;
+	margin-left:68px;
+  }
+   .kuang{
+    height:300px;	
+	width: 350px;
+ 	margin-top:180px; 
+ 	margin-left:180px; 
+	background-color:rgba(255,255,255,0.3);
+	float:left;	
+    border-width:0.1px;
+    border-style:hide;
+    border-color: #AFEEEE;
+    padding:30px;
+  }
+  .lastOne{
+    font-weight: bold;  
+    float:left;
+    padding-left:100px;
+    padding-top:360px;
+    font-size:25px;
+  }
