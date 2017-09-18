@@ -1,18 +1,20 @@
-package com.test2;
+package com.webtest.fibonacciAndJoseph;
 
 import java.io.BufferedInputStream;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
-
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 
 public class Test {
+	private static final String FILE_PATH = "path.properties";
+	private static final String LOG4J_CONFIGURE = "log4j.properties";
+
 	public static void main(String[] args) throws IOException{
 		
-	 PropertyConfigurator.configure( "log4j.properties" );  //test log
+	 PropertyConfigurator.configure( LOG4J_CONFIGURE );  //test log
 	 Logger logger  =  Logger.getLogger(Test.class );  
 	 	 
 	 Properties prop = new Properties(); 
@@ -22,7 +24,7 @@ public class Test {
 	 Joseph j = new Joseph();
 	 
 	 try{
-	 is = new BufferedInputStream (new FileInputStream("path.properties"));
+	 is = new BufferedInputStream (new FileInputStream(FILE_PATH));
      prop.load(is);
      
      String inputFilePath1 = (prop.getProperty("finput"));
@@ -48,5 +50,5 @@ public class Test {
 	 }finally{
 		 is.close();
 	 }	        
-	}
+	}	
 }

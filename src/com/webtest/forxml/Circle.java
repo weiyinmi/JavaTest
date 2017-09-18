@@ -1,4 +1,4 @@
-package com.forxml;
+package com.webtest.forxml;
 
 import java.util.List;
 

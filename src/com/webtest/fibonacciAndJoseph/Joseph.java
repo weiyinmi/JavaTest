@@ -1,4 +1,4 @@
-package com.test2;
+package com.webtest.fibonacciAndJoseph;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -14,8 +14,8 @@ import javax.xml.bind.Unmarshaller;
 
 import org.apache.log4j.Logger;
 
-import com.forxml.JosephForXml;
-import com.forxml.JosephProblemRequest;
+import com.webtest.forxml.JosephForXml;
+import com.webtest.forxml.JosephProblemRequest;
 
 public class Joseph implements Problem {
      
@@ -88,7 +88,7 @@ public class Joseph implements Problem {
 /*		List<String> list = new ArrayList<String>();
 		list.addAll(Arrays.asList(array));	
 		System.out.println(list);*/
-		int a = start - 1;
+		int a = start - 1;    //index
 		while(list.size()>1){
 			a = a + interval;
 			a = a % (list.size());
