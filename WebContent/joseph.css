@@ -8,22 +8,30 @@ body{
 	background-repeat:no-repeat;
 	background-size:cover; 
 }
+ol{
+	width:120px;
+	height:200px;
+	background-color:white;
+	margin-left:70px;
+	margin-top:0px;
+	overflow: scroll;
+}
   .text{
-     background-color:pink;
-     width:250px;
+     background-color:white;
+     width:145px;
      height:35px;
      margin-left:10px;
      opacity:1;
   }
    .text1{
-     background-color:pink;
+     background-color:white;
      width:250px;
      height:35px;
      margin-left:28px;
    }
       
   .text2 {
-     background-color:pink;
+     background-color:white;
      width:250px;
      height:35px;
      margin-left:6px;
@@ -32,12 +40,24 @@ body{
     height: 40px;	
 	width: 100px;		
 	background: yellow;
-	margin-left:68px;
+	margin-top:30px;
+	margin-left:285px;
+  }
+ .button1{
+    height: 40px;	
+	width: 100px;		
+	background: yellow;
+	margin-left:10px;
+  }
+ .button2{
+    height: 25px;	
+	width: 90px;		
+	background: #AFEEEE;
   }
    .kuang{
-    height:300px;	
-	width: 350px;
- 	margin-top:180px; 
+    height:530px;	
+	width: 400px;
+ 	margin-top:30px; 
  	margin-left:180px; 
 	background-color:rgba(255,255,255,0.3);
 	float:left;	
@@ -52,4 +72,12 @@ body{
     padding-left:100px;
     padding-top:360px;
     font-size:25px;
-  }
+ }
+  .menu {
+    background:white;
+    width:100px;
+    height:150px;
+    display:none;
+    margin-right:70px;  
+ }
+
