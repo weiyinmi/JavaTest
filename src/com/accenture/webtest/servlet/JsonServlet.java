@@ -1,4 +1,4 @@
-package com.webtest.servlet;
+package com.accenture.webtest.servlet;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -13,11 +13,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.accenture.webtest.fibonacciAndJoseph.Joseph;
+import com.sun.xml.internal.fastinfoset.util.StringArray;
+
 //import org.json.JSONObject;
 import net.sf.json.JSONObject;
-
-import com.webtest.fibonacciAndJoseph.Joseph;
-import com.webtest.forxml.JosephProblemRequest;
 
 
 /**
@@ -60,17 +60,18 @@ public class JsonServlet extends HttpServlet {
 	    }	  
 	    
 	//    JSONObject josephObj = new JSONObject(json.toString());
-	    JSONObject josephObj = JSONObject.fromObject(json.toString());
+	    JSONObject josephObj = JSONObject.fromObject(json.toString());	   
 	   
-	    System.out.println(josephObj);
-	   
-	    String peoples = (String)josephObj.get("people");
+//	    String peoples = (String)josephObj.get("people");
+
+        List<String> list=(List<String>)josephObj.get("people");
 	    String start = (String)josephObj.get("start");
 	    String interval = (String)josephObj.get("interval");
 		
-	    String[] arr = peoples.split("\\,");
+/*	    String[] arr = peoples.split("\\,");
+	    System.out.println(arr);
 	    List<String> list = new ArrayList<String>();
-	    list.addAll(Arrays.asList(arr));
+	    list.addAll(Arrays.asList(arr));*/
 	    
 	    Joseph joseph=new Joseph();
 	    String last =null;
@@ -82,9 +83,7 @@ public class JsonServlet extends HttpServlet {
 	    	}
 	    }else{
 	    	System.out.println("Start isn`t a number!");
-	    }
-	    	  	   
-	    System.out.println(last);
+	    }	    	  	   
 	    
 	    JSONObject lastOne=new JSONObject();
 	    lastOne.put("lastPeople", last);

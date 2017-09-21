@@ -1,4 +1,4 @@
-package com.webtest.servlet;
+package com.accenture.webtest.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -13,8 +13,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.webtest.fibonacciAndJoseph.Fibonacci;
-import com.webtest.fibonacciAndJoseph.Joseph;
+import com.accenture.webtest.fibonacciAndJoseph.Fibonacci;
+import com.accenture.webtest.fibonacciAndJoseph.Joseph;
 
 /**
  * Servlet implementation class ServletTest
@@ -37,17 +37,31 @@ public class ServletTest extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		 response.setContentType("text/html");
-		 PrintWriter out = response.getWriter();
+		 PrintWriter out = response.getWriter(); 
 		 
 		 String lengt;
     	 lengt = request.getParameter("length");
     	
     	 Fibonacci fibonacci = new Fibonacci();
-    	    	
-/*    	 request.setAttribute("sequence", value);
-         request.getRequestDispatcher("/ResponseFibonacci.jsp").forward(request,response);*/
     	 
+    	 List<BigInteger> value = new ArrayList<>();
     	 if(lengt.matches( POSITIVE_NUMBER_REGEX )){
+  		   for(int i=0;i<Integer.parseInt(lengt);i++){
+ 	      	  if(i<=92){ 
+ 	      		  Long val =fibonacci.fibonacciFunction(i);
+        		  BigInteger big = new BigInteger(val.toString());
+        		  value.add(big);
+ 	      	  }else{
+ 	      		  value.add(fibonacci.fibonacciBigN(i));
+ 	      	  }
+    	  }
+    	 }else{
+			 System.out.println("Please input a number!");
+		 }
+    	 request.setAttribute("sequence", value);
+         request.getRequestDispatcher("/ResponseFibonacci.jsp").forward(request,response);
+    	 
+/*    	 if(lengt.matches( POSITIVE_NUMBER_REGEX )){
 		 out.println("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">");
 		 out.println("<HTML>");
 		 out.println("  <HEAD><TITLE>Fabonacci</TITLE></HEAD>");
@@ -68,7 +82,7 @@ public class ServletTest extends HttpServlet {
 		 out.println("  </BODY>");
 		 out.println("</HTML>");
 		 out.flush();
-		 out.close();
+		 out.close();    */
 	}		 	
 
 	/**

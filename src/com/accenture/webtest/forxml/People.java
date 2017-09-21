@@ -1,4 +1,4 @@
-package com.webtest.forxml;
+package com.accenture.webtest.forxml;
 
 public class People {
 		

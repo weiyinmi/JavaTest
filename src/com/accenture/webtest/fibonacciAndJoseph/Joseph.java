@@ -1,4 +1,4 @@
-package com.webtest.fibonacciAndJoseph;
+package com.accenture.webtest.fibonacciAndJoseph;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -14,8 +14,8 @@ import javax.xml.bind.Unmarshaller;
 
 import org.apache.log4j.Logger;
 
-import com.webtest.forxml.JosephForXml;
-import com.webtest.forxml.JosephProblemRequest;
+import com.accenture.webtest.forxml.JosephForXml;
+import com.accenture.webtest.forxml.JosephProblemRequest;
 
 public class Joseph implements Problem {
      

@@ -1,4 +1,4 @@
-package com.webtest.fibonacciAndJoseph;
+package com.accenture.webtest.fibonacciAndJoseph;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -17,8 +17,8 @@ import javax.xml.bind.Unmarshaller;
 
 import org.apache.log4j.Logger;
 
-import com.webtest.forxml.FibonacciForXml;
-import com.webtest.forxml.FibonacciSequenceRequest;
+import com.accenture.webtest.forxml.FibonacciForXml;
+import com.accenture.webtest.forxml.FibonacciSequenceRequest;
 
 public class Fibonacci implements Problem {
 	
@@ -41,7 +41,7 @@ public class Fibonacci implements Problem {
 			
 			out = new PrintWriter(new FileWriter(stf.setTxtFile(outputDirPath)));
 			
-	        JAXBContext context = JAXBContext.newInstance(com.webtest.forxml.FibonacciSequenceRequest.class);  //read xml file
+	        JAXBContext context = JAXBContext.newInstance(com.accenture.webtest.forxml.FibonacciSequenceRequest.class);  //read xml file
 	        Unmarshaller unmarshaller = context.createUnmarshaller(); 
 	        Object object = unmarshaller.unmarshal(in);
 	        

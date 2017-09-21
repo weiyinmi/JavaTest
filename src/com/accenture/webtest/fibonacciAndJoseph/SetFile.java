@@ -1,4 +1,4 @@
-package com.webtest.fibonacciAndJoseph;
+package com.accenture.webtest.fibonacciAndJoseph;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
