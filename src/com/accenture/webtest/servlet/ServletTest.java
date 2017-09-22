@@ -13,8 +13,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.accenture.webtest.fibonacciAndJoseph.Fibonacci;
-import com.accenture.webtest.fibonacciAndJoseph.Joseph;
+import com.accenture.webtest.service.Fibonacci;
+import com.accenture.webtest.service.Joseph;
 
 /**
  * Servlet implementation class ServletTest

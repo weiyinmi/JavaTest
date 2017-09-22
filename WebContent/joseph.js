@@ -13,6 +13,7 @@ function append() {
 	}, function() {
 		/* $(".menu").css("display", "none"); */
 	});
+	
 	console.log("Append: "+ li.innerText);                   //print log in browser console
 	console.log("Peoples are:"+$("#peoplesList").text());
 };
@@ -28,6 +29,7 @@ function insertPeople() {                                   //Insert a person
 		$("#selected").before(li);	
 		console.log("Insert "+li.innerText +  + ' in event');
 	});*/
+	$(".menu").css("display", "none");
 	
 	console.log("Insert "+li.innerText +  + ' in insertPeople');
 	console.log("Peoples are:"+$("#peoplesList").text());
@@ -35,6 +37,8 @@ function insertPeople() {                                   //Insert a person
 
 function deletePeople() {                            //Delete a person
 	$("#selected").remove();
+	$(".menu").css("display", "none");
+	
 	console.log($("#selected").text()+" remove!");
 	console.log("Peoples are:"+$("#peoplesList").text());
 };
@@ -44,8 +48,9 @@ function moveUpPeople() {                            //MoveUp
 		var onthis = $(this);
 		var getUp = onthis.prev();
 		$(onthis).after(getUp);
-		
+		$(".menu").css("display", "none");
 	});
+	
 	console.log($("#selected").text()+" move up!");
 	console.log("Peoples are:"+$("#peoplesList").text());
 };
@@ -55,8 +60,9 @@ function moveDownPeople() {                      //MoveDown
 		var onthis = $(this);
 		var getdown = onthis.next();
 		$(getdown).after(onthis);
-		
+		$(".menu").css("display", "none");
 	});
+	
 	console.log($("#selected").text()+" move down!");
 	console.log("Peoples are:"+$("#peoplesList").text());
 };
@@ -66,7 +72,8 @@ function RenamePeople() {                     //Rename for a person
 	var li = document.createElement('li');
 	li.innerText = a;
 	$("#selected").replaceWith(li);
-
+	$(".menu").css("display", "none");
+	
 	console.log("Rename : "+$("#selected").text());
 	console.log("Peoples are:"+$("#peoplesList").text());
 };
@@ -107,14 +114,23 @@ function calc() {
 				peopleArr.push($(this).text());
 			});
 		});
-
+        
 		var josephObj = {                                  // Create a json object for inputs
 			people : peopleArr,
 			start : $("#istart").val(),
 			interval : $("#iinterval").val()
 		};
 
-		var joseph = JSON.stringify(josephObj);          
+		var joseph = JSON.stringify(josephObj);      
+/*		var circleobj = {                                  // Create a json object for inputs				
+				start : $("#istart").val(),
+				interval : $("#iinterval").val(),
+				persons : peopleArr
+			};
+        var josephObj={
+        		circle:circleobj,
+        };*/
+		var joseph = JSON.stringify(josephObj);
 
 		console.log("The json is:" + joseph);
 

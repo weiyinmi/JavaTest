@@ -8,6 +8,9 @@ import java.util.Properties;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 
+import com.accenture.webtest.service.Fibonacci;
+import com.accenture.webtest.service.Joseph;
+
 public class Test {
 	private static final String FILE_PATH = "path.properties";
 	private static final String LOG4J_CONFIGURE = "log4j.properties";

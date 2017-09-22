@@ -13,6 +13,7 @@ ol{
 	height:200px;
 	background-color:white;
 	margin-left:70px;
+	margin-bottom:30px;
 	margin-top:0px;
 	overflow: scroll;
 }
@@ -55,7 +56,7 @@ ol{
 	background: #AFEEEE;
   }
    .kuang{
-    height:530px;	
+    height:540px;	
 	width: 400px;
  	margin-top:30px; 
  	margin-left:180px; 

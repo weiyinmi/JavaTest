@@ -1,4 +1,4 @@
-package com.accenture.webtest.fibonacciAndJoseph;
+package com.accenture.webtest.service;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -17,6 +17,8 @@ import javax.xml.bind.Unmarshaller;
 
 import org.apache.log4j.Logger;
 
+import com.accenture.webtest.fibonacciAndJoseph.Problem;
+import com.accenture.webtest.fibonacciAndJoseph.SetFile;
 import com.accenture.webtest.forxml.FibonacciForXml;
 import com.accenture.webtest.forxml.FibonacciSequenceRequest;
 
@@ -24,7 +26,7 @@ public class Fibonacci implements Problem {
 	
 	 private static final String POSITIVE_NUMBER_REGEX = "^\\d+$";
 	Logger logger  =  Logger.getLogger(Fibonacci.class ); 
-	 
+
 	@Override
 	public void solve(String inputFilePath, String outputDirPath) {
 		
@@ -98,7 +100,12 @@ public class Fibonacci implements Problem {
 		    	  }
 			}			
 		}
-       	
+    
+	/**
+	 * Achieve fibonacci sequence,just input a length,but the max length of fibonacciFunction is 92.When n>92,we use another function to achieve the rest of sequence.
+	 * @param n the length of fibonacci sequence
+	 * @return a fibonacci sequence
+	 */
 	public long fibonacciFunction(int n){
 		if(n==0){
 			return 0;
@@ -116,6 +123,12 @@ public class Fibonacci implements Problem {
 		}
 		return n;
 	}	
+	
+	/**
+	 * Achieve fibonacci sequence when n>92.
+	 * @param n the length of fibonacci sequence
+	 * @return a fibonacci sequence
+	 */
     public BigInteger fibonacciBigN(int n) {  
         if (n > 92) {  
             int m = (n / 2) + (n & 1);  

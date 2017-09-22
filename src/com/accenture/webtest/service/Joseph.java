@@ -1,4 +1,4 @@
-package com.accenture.webtest.fibonacciAndJoseph;
+package com.accenture.webtest.service;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -14,6 +14,8 @@ import javax.xml.bind.Unmarshaller;
 
 import org.apache.log4j.Logger;
 
+import com.accenture.webtest.fibonacciAndJoseph.Problem;
+import com.accenture.webtest.fibonacciAndJoseph.SetFile;
 import com.accenture.webtest.forxml.JosephForXml;
 import com.accenture.webtest.forxml.JosephProblemRequest;
 
@@ -83,7 +85,15 @@ public class Joseph implements Problem {
 		PrintWriter out = new PrintWriter(new FileWriter(stf.setTxtFile(outputDirPath)));
 		return out;
 	}
-	public String josephFunction(List<String> list, int start,int interval ) throws IOException{
+	
+	/**
+	 * Achieve joseph problem,when josephFunction is working, peoples would be removed one by one,until leave the last one.
+	 * @param list input several peoples as a list
+	 * @param start start index
+	 * @param interval interval
+	 * @return the last person
+	 */
+	public String josephFunction(List<String> list, int start,int interval ) {
 		
 /*		List<String> list = new ArrayList<String>();
 		list.addAll(Arrays.asList(array));	
