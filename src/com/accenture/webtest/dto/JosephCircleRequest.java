@@ -1,6 +1,6 @@
 package com.accenture.webtest.dto;
 
-public class JosephCircle {
+public class JosephCircleRequest extends DataTransferObject{
     private JosephObject circle;
 
 	public JosephObject getCircle() {

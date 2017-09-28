@@ -11,14 +11,14 @@ import org.apache.log4j.PropertyConfigurator;
 import com.accenture.webtest.service.Fibonacci;
 import com.accenture.webtest.service.Joseph;
 
-public class Test {
+public class Main {
 	private static final String FILE_PATH = "path.properties";
 	private static final String LOG4J_CONFIGURE = "log4j.properties";
 
 	public static void main(String[] args) throws IOException{
 		
 	 PropertyConfigurator.configure( LOG4J_CONFIGURE );  //test log
-	 Logger logger  =  Logger.getLogger(Test.class );  
+	 Logger logger  =  Logger.getLogger(Main.class );  
 	 	 
 	 Properties prop = new Properties(); 
 	 InputStream is = null;
@@ -49,7 +49,7 @@ public class Test {
 	 }
      }
 	 }catch(Exception e){
-		 e.printStackTrace();
+		 logger.warn(e);
 	 }finally{
 		 is.close();
 	 }	        

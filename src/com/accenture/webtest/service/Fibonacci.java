@@ -76,23 +76,20 @@ public class Fibonacci implements Problem {
 	         Marshaller jaxbMarshaller = jaxbContext.createMarshaller();  
 	            // output pretty printed  
 	         jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);  
-	         jaxbMarshaller.marshal(ffx, out); 
-		     
-	 //        jaxbMarshaller.marshal(ffx, System.out); 
-		     
+	         jaxbMarshaller.marshal(ffx, out); 		   
 			
 		} catch (JAXBException e) {
-			e.printStackTrace();
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
+			logger.warn(e);
+		} catch ( FileNotFoundException e) {
+			logger.warn(e);
 		} catch (IOException e) {
-			e.printStackTrace();
+			logger.warn(e);
 		}finally{      
 			if(in !=null){
 		    	  try {   		  
 					in.close();
 				} catch (IOException e) {			
-					e.printStackTrace();
+					logger.warn(e);
 				}
 		    	  }
 		    	  if(out!=null){

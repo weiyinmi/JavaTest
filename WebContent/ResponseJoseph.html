@@ -4,47 +4,67 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Joseph Problem</title>
 
-<link href="joseph.css" rel="stylesheet" style="text/css"/> 
-<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
-<script type="text/javascript" src="joseph.js"> </script>
+<link href="CSS/joseph.css" rel="stylesheet" style="text/css" />
+<script type="text/javascript" src="./JS/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="./JS/joseph.js">
+	
+</script>
 
 </head>
 
-<body> 
-   
-    <div class="kuang">  
-   <h1>Joseph problem</h1>
-    <div name="joseph" >  
-   <span style="font-weight: bold">Start:</span> <input id ="istart" class="text1" type="text" name="start" placeholder=" a number"/>   
+<body>
+
+	<div class="kuang">
+		<h1>Joseph problem</h1>
+		<div name="joseph">
+			<span style="font-weight: bold">Start:</span> <input id="istart"
+				class="text1" type="text" name="start" placeholder=" a number" /> <br />
+			<br /> <span style="font-weight: bold">Interval:</span> <input
+				id="iinterval" class="text2" type="text" name="interval"
+				placeholder=" a number" /> <br /> <br />
+			<!--    <span style="font-weight: bold">Peoples:</span> <input id="ipeoples" class="text" type="text" name="peoples"/>   
    <br/>
-   <br/>   
-   <span style="font-weight: bold">Interval:</span> <input id ="iinterval" class="text2" type="text" name="interval" placeholder=" a number" />   
-   <br/>
-   <br/>  
-<!--    <span style="font-weight: bold">Peoples:</span> <input id="ipeoples" class="text" type="text" name="peoples"/>   
-   <br/>
-   <br/>   --> 
-  <div style="display:inline" > 
-  <span style="font-weight: bold;display:inline">Peoples:</span><ol id = "peoplesList" > </ol> </div>
-     <div id="myMenu" style="float:right;margin-top:-200px">
-      <table  class="menu" > 
-      <tr><td><input onclick = "insertPeople()" id="insert" class="button2" type="button" value="Insert"/></td></tr>
-      <tr><td><input onclick = "deletePeople()" id="delete" class="button2" type="button" value="Delete"/></td></tr>
-      <tr><td><input onclick = "moveUpPeople()" id="moveup" class="button2" type="button" value="MoveUp"/></td></tr>
-      <tr><td><input onclick = "moveDownPeople()" id="movedown" class="button2" type="button" value="MoveDown"/></td></tr>
-      <tr><td><input onclick = "RenamePeople()" id="rename" class="button2" type="button" value="Rename"/></td></tr>
-     </table>
-    </div>
-   <input id="info" class="text" placeholder = "input people one by one">  
-   <button onclick = "append()" class="button1" type="button" name="button" >append</button> 
-   <button id="clear" class="button1">clear</button>      
-   <br/>
-   <button id="submit" class="button" type="button">Submit</button>
-   </div>       
-   </div>              
- 
-  <div  id="last" class="lastOne" > </div>  
-   
+   <br/>   -->
+			<div style="display: inline">
+				<span style="font-weight: bold; display: inline">Peoples:</span>
+				<ol id="peoplesList">
+				</ol>
+			</div>
+			<div id="myMenu" style="float: right; margin-top: -200px">
+				<table class="menu">
+					<tr>
+						<td><input onclick="insertPeople()" id="insert"
+							class="button2" type="button" value="Insert" /></td>
+					</tr>
+					<tr>
+						<td><input onclick="deletePeople()" id="delete"
+							class="button2" type="button" value="Delete" /></td>
+					</tr>
+					<tr>
+						<td><input onclick="moveUpPeople()" id="moveup"
+							class="button2" type="button" value="MoveUp" /></td>
+					</tr>
+					<tr>
+						<td><input onclick="moveDownPeople()" id="movedown"
+							class="button2" type="button" value="MoveDown" /></td>
+					</tr>
+					<tr>
+						<td><input onclick="RenamePeople()" id="rename"
+							class="button2" type="button" value="Rename" /></td>
+					</tr>
+				</table>
+			</div>
+			<input id="info" class="text" placeholder="input people one by one">
+			<button onclick="append()" class="button1" type="button"
+				name="button">append</button>
+			<button id="clear" class="button1">clear</button>
+			<br />
+			<button id="submit" class="button" type="button">Submit</button>
+		</div>
+	</div>
+
+	<div id="last" class="lastOne"></div>
+
 </body>
 
 </html>

@@ -11,6 +11,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.log4j.Logger;
+
+import com.accenture.webtest.exception.BusinessException;
 import com.accenture.webtest.service.Joseph;
 
 //import org.json.JSONObject;
@@ -24,7 +27,7 @@ public class JsonServlet extends HttpServlet {
 	private static final String Encoded_FORMANT = "utf-8";
 	private static final long serialVersionUID = 1L;
 	private static final String POSITIVE_NUMBER_REGEX = "^\\d+$";
-
+	Logger logger = Logger.getLogger(JsonServlet.class);
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
@@ -42,16 +45,19 @@ public class JsonServlet extends HttpServlet {
 	}
 
 	/**
-	 * Recive a json object from front-end,achieve joseph problem ,then response
+	 * Receive a json object from front-end,achieve joseph problem ,then response
 	 * result to js.
 	 * 
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
 	 *      response)
 	 */
 
+	@SuppressWarnings("unchecked")
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
+		
+		
 		response.setCharacterEncoding(Encoded_FORMANT);
 		response.setContentType("application/json");
 		PrintWriter out = null;
@@ -77,12 +83,15 @@ public class JsonServlet extends HttpServlet {
 		 * List<String> list = new ArrayList<String>();
 		 * list.addAll(Arrays.asList(arr));
 		 */
-
+		try {
+			
 		Joseph joseph = new Joseph();
 		String last = null;
 		if (start.matches(POSITIVE_NUMBER_REGEX)) {
 			if (interval.matches(POSITIVE_NUMBER_REGEX)) {
-				last = joseph.josephFunction(list, Integer.parseInt(start), Integer.parseInt(interval));
+				
+					last = joseph.josephFunction(list, Integer.parseInt(start), Integer.parseInt(interval));
+			
 			} else {
 				System.out.println("Interval isn`t a number!");
 			}
@@ -93,7 +102,10 @@ public class JsonServlet extends HttpServlet {
 		JSONObject lastOne = new JSONObject();
 		lastOne.put("lastPeople", last);
 		out.write(lastOne.toString());
-
+		
+		} catch (NumberFormatException | BusinessException e) {
+			logger.info(e);
+		}
 		out.flush();
 		out.close();
 	}
