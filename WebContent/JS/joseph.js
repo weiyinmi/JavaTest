@@ -4,6 +4,7 @@ function append() {
 	li.innerText = a;
 	$("#info").attr("value", "");
 	$("#peoplesList").append(li);
+	
 	$("#peoplesList li").hover(function() {
 		$("#peoplesList li").css("background-color", "white");
 		$("#selected").attr("id", "");
@@ -88,7 +89,9 @@ function clear() {
 };
 
 function validateStart(value) {
-	if (value != "") {
+	if (value == "") {
+		return false;
+	} else {
 		if (Number.isInteger(Number(value))) {
 			if (Number(value) > 0) {
 				return true;
@@ -98,23 +101,28 @@ function validateStart(value) {
 		} else {
 			return false;
 		}
-	} else {
-		return false;
 	}
 };
 
 function validateInterval(value) {
-	if (value == "") {	
+	if (value == "") {
 		return false;
-	}else if (Number.isInteger(Number(value))) {
-		if (Number(value) >= 0) {
-			return true;
+	} else {
+		if (Number.isInteger(Number(value))) {
+			if (Number(value) >= 0) {
+				return true;
+			} else {
+				return false;
+			}
 		} else {
 			return false;
 		}
-	} else {
-		return false;
-	}		
+	}
+};
+
+function setEmpty()
+{
+	$("#info").val("");
 };
 
 function calc() {
@@ -134,7 +142,7 @@ function calc() {
 			 * var joseph = JSON.stringify(josephObj);
 			 */
 			if ($("#peoplesList").children().text() != "") {
-				
+
 				var peopleArr = [];
 				$("#peoplesList").each(function() { // Peoples array
 					$(this).children().each(function() {

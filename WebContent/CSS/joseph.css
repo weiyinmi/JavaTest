@@ -24,9 +24,9 @@ ol {
 
 .text {
 	background-color: white;
-	width: 145px;
+	width: 185px;
 	height: 35px;
-	margin-left: 10px;
+	margin-left:13px;
 	opacity: 1;
 }
 
@@ -49,7 +49,16 @@ ol {
 	width: 100px;
 	background: yellow;
 	margin-top: 30px;
-	margin-left: 285px;
+	margin-right: 35px;
+	float:right;
+}
+.button3 {
+	height: 40px;
+	width: 100px;
+	background: yellow;
+	margin-top: 30px;
+	margin-left: 60px;
+	float:left;
 }
 
 .button1 {
@@ -66,7 +75,7 @@ ol {
 }
 
 .kuang {
-	height: 540px;
+	height: 570px;
 	width: 400px;
 	margin-top: 30px;
 	margin-left: 180px;
@@ -75,7 +84,7 @@ ol {
 	border-width: 0.1px;
 	border-style: hide;
 	border-color: #AFEEEE;
-	padding: 30px;
+	padding: 20px;
 }
 
 .lastOne {

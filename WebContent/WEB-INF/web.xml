@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+ <!--  <servlet>
+    <servlet-name>ServletTest</servlet-name>
+    <servlet-class>com.servlet.ServletTest</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletTest</servlet-name>
+    <url-pattern>/WebTest/ServletTest</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>JsonServlet</servlet-name>
+    <servlet-class>com.servlet.JsonServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>JsonServlet</servlet-name>
+    <url-pattern>/WebTest/JsonServlet</url-pattern>
+  </servlet-mapping> -->
+</web-app>

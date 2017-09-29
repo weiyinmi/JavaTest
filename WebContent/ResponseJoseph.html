@@ -54,12 +54,14 @@
 					</tr>
 				</table>
 			</div>
-			<input id="info" class="text" placeholder="input people one by one">
-			<button onclick="append()" class="button1" type="button"
-				name="button">append</button>
-			<button id="clear" class="button1">clear</button>
-			<br />
-			<button id="submit" class="button" type="button">Submit</button>
+			<span style="font-weight: bold">Input:</span><input id="info" class="text" onfocus="setEmpty() " placeholder="input people one by one">
+			<button onclick="append()" class="button1" type="button" 
+				name="button">append</button>			
+			
+			<div >
+			<div><button id="clear" class="button3">clear</button></div>
+			<div><button id="submit" class="button" type="button">Submit</button></div>
+			</div>
 		</div>
 	</div>
 
